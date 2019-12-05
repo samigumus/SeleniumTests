@@ -17,6 +17,8 @@ public class LoginTests extends TestBase {
 
     @Test(description = "Verify that page title is a 'Dashboard'")
     public void test1(){
+        extentTest = extentReports.createTest("login test");
+
         //create page object
         LoginPage loginPage = new LoginPage();
         //call login method

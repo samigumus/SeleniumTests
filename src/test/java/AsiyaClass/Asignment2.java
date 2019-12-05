@@ -24,22 +24,14 @@ public class Asignment2 {
         //relative xpath
         WebElement actualMessage = driver.findElement(By.xpath("//div[@class='alert alert-error']"));
 
-        String actualMsg =actualMessage.getText();
+        String actualMsg = actualMessage.getText();
         //System.out.println(actualMsg);
 
         String expectedMsg = "Invalid user name or password.";
 
-        String result = StringCompare.verifyEquals(actualMsg,expectedMsg);
+        String result = StringCompare.verifyEquals(actualMsg, expectedMsg);
 
         System.out.println(result);
-
-       /*
-        if (actualMsg.equals(expectedMsg))
-            System.out.println("NEGATIVE TEST PASSED");
-        else
-            System.out.println("TEST FAILED");
-
-        */
 
         driver.close();
     }

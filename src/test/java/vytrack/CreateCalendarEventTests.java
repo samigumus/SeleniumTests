@@ -10,8 +10,9 @@ import utils.TestBase;
 public class CreateCalendarEventTests extends TestBase {
 
 
-    @Test(description = "Verify owners name is equals to Stephan Haley (it works on qa1 storemenager85)")
+    @Test(description = "Verify owners name is equals to Pearl Wuckert (it works on qa1 storemenager85)")
     public void test1() {
+        extentTest = extentReports.createTest("Verify owners name is equals to Pearl Wuckert");
         LoginPage loginPage = new LoginPage();
         CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
         CreateCalendarEventPage createCalendarEventPage = new CreateCalendarEventPage();
@@ -27,11 +28,12 @@ public class CreateCalendarEventTests extends TestBase {
         calendarEventsPage.clickToCreateCalendarEvent();
 
         calendarEventsPage.waitUntilLoaderMaskDisappear();
-        String expectedOwner = "Stephan Haley";
+        String expectedOwner = "Pearl Wuckert";
         String actualOwner = createCalendarEventPage.owner.getText().trim();
 
         Assert.assertEquals(actualOwner, expectedOwner);
 
+        extentTest.pass("Verified owners name is Pearl Wuckert");
 
     }
 }

@@ -28,35 +28,14 @@ public class Assigment {
 
         BrowserUtils.wait(2);
 
-        if (actualTitle.equals(expectedTitle))
-        {
+        if (actualTitle.equals(expectedTitle)) {
             System.out.println("LOGIN SUCCESFULL");
-        }
-        else
+        } else
             System.out.println("LOGIN FAILED");
 
         System.out.println("===============================");
 
         BrowserUtils.wait(2);
-
-        /*
-        driver.navigate().to("https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract");
-
-        String contractPage = "Vehicle Contract - Entities - System - Car - Entities - System";
-        String actualContractPage = driver.getTitle();
-
-        if(actualContractPage.equals(contractPage))
-        {
-            System.out.println("USER SUCCESSFULL ACCESS VEHICLE CONTRACT PAGE");
-        }
-        else
-        {
-            System.out.println("USER CAN NOT ACCESS THIS PAGE");
-        }
-
-        BrowserUtils.wait(2);
-
-         */ //TRY CONTRACT PAGE
 
         driver.quit();
     }
