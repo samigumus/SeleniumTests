@@ -16,7 +16,7 @@ public class NewCalendarEventsTests extends TestBase {
         loginPage.login("storemanager85", "UserUser123");
         loginPage.navigateTo("Activities", "Calendar Events");
 
-        String expectedSubtitle = "All Calendar Event"; // create fail "Events" for test fail and screenshot
+        String expectedSubtitle = "All Calendar Events"; // create fail "Events" for test fail and screenshot
         String actualSubTitle = loginPage.getPageSubTitle();
 
         Assert.assertEquals(actualSubTitle, expectedSubtitle);

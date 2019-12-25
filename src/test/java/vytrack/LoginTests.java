@@ -32,5 +32,7 @@ public class LoginTests extends TestBase {
         //it waits until title is 'Dashboard'
         wait.until(ExpectedConditions.titleIs("Dashboard"));
         Assert.assertEquals(Driver.get().getTitle(), "Dashboard");
+
+        extentTest.pass("Verified title name is Dashboard");
     }
 }

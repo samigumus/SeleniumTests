@@ -53,6 +53,7 @@ public class CalendarEventsTests {
 
     @Test(description = "Verify page subtitle")
     public void test1() {
+
         String expectedSubtitle = "All Calendar Events";
         String actualSubtitle = driver.findElement(By.className("oro-subtitle")).getText();
         Assert.assertEquals(actualSubtitle, expectedSubtitle, "Subtitle is wrong!");
